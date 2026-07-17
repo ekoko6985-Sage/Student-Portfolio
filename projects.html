@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects - Emmanuel Koko Portfolio. Showcase of cybersecurity, web development, and academic projects.">
+    <meta name="keywords" content="Projects, Portfolio, Cybersecurity, Web Development, Emmanuel Koko">
+    <title>Projects | Emmanuel Koko Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">🔐</span>
+                    <span class="logo-text">EK</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-page="about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link active" data-page="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="planner.html" class="nav-link" data-page="planner">Academic Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header" aria-label="Projects page header">
+            <div class="page-header-content">
+                <h1>My Projects</h1>
+                <p>Showcase of my technical expertise and creative solutions</p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="filter-section" aria-label="Project filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="security">Security</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-full" aria-label="Complete projects list">
+            <div class="container">
+                <div class="projects-list">
+                    <!-- Project 1 -->
+                    <article class="project-card-full fade-in" data-category="web">
+                        <div class="project-card-image">
+                            <img src="images/project1.jpg" alt="Student Portfolio Website">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(0)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Student Portfolio Website</h3>
+                            <p class="project-description">
+                                A modern, responsive portfolio website built with HTML5, CSS3, and Vanilla JavaScript. Features include smooth animations, glassmorphism effects, and a fully functional academic planner with local storage support.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Responsive Design</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">GitHub</a>
+                                <a href="#" class="btn btn-small btn-secondary">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card-full fade-in" data-category="security">
+                        <div class="project-card-image">
+                            <img src="images/project2.jpg" alt="Network Security Analysis">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(1)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Network Security Analysis</h3>
+                            <p class="project-description">
+                                Comprehensive analysis and documentation of network security protocols, including TCP/IP security, firewall configurations, VPN implementations, and vulnerability assessment methodologies.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Network Security</span>
+                                <span class="tech-badge">TCP/IP</span>
+                                <span class="tech-badge">Firewalls</span>
+                                <span class="tech-badge">VPN</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">GitHub</a>
+                                <a href="#" class="btn btn-small btn-secondary">Report</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card-full fade-in" data-category="academic">
+                        <div class="project-card-image">
+                            <img src="images/project3.jpg" alt="Cybersecurity Awareness">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(2)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Cybersecurity Awareness Campaign</h3>
+                            <p class="project-description">
+                                Educational materials and awareness campaign on best practices for information security, data protection, password management, phishing prevention, and safe internet usage.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Security Education</span>
+                                <span class="tech-badge">Awareness</span>
+                                <span class="tech-badge">Documentation</span>
+                                <span class="tech-badge">Training</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">Materials</a>
+                                <a href="#" class="btn btn-small btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card-full fade-in" data-category="web">
+                        <div class="project-card-image">
+                            <img src="images/project1.jpg" alt="Task Management App">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(3)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Academic Task Manager</h3>
+                            <p class="project-description">
+                                Interactive task management application with features for creating, editing, deleting tasks, marking completion status, filtering, and local storage persistence for academic planning.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Local Storage</span>
+                                <span class="tech-badge">DOM API</span>
+                                <span class="tech-badge">Vanilla JS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">GitHub</a>
+                                <a href="#" class="btn btn-small btn-secondary">Try It</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card-full fade-in" data-category="security">
+                        <div class="project-card-image">
+                            <img src="images/project2.jpg" alt="Ethical Hacking Guide">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(4)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Ethical Hacking & Penetration Testing Guide</h3>
+                            <p class="project-description">
+                                Comprehensive guide covering ethical hacking principles, penetration testing methodologies, vulnerability scanning, exploitation techniques, and security best practices for authorized assessments.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Ethical Hacking</span>
+                                <span class="tech-badge">Pen Testing</span>
+                                <span class="tech-badge">Security</span>
+                                <span class="tech-badge">Documentation</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">Guide</a>
+                                <a href="#" class="btn btn-small btn-secondary">Resources</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card-full fade-in" data-category="academic">
+                        <div class="project-card-image">
+                            <img src="images/project3.jpg" alt="Digital Forensics Study">
+                            <div class="project-overlay-full">
+                                <button class="view-btn" onclick="openProjectModal(5)">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Digital Forensics & Incident Response</h3>
+                            <p class="project-description">
+                                Study materials on digital forensics principles, evidence collection, analysis methodologies, incident response procedures, and case studies in cybersecurity investigations.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Forensics</span>
+                                <span class="tech-badge">Incident Response</span>
+                                <span class="tech-badge">Analysis</span>
+                                <span class="tech-badge">Evidence</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-small btn-primary">Study</a>
+                                <a href="#" class="btn btn-small btn-secondary">Cases</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div id="modalTech" class="modal-tech"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer section">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Emmanuel Koko</h4>
+                <p>Cybersecurity Student | Information Security Enthusiast</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <ul>
+                    <li>Email: <a href="mailto:e.koko6985@miva.edu.ng">e.koko6985@miva.edu.ng</a></li>
+                    <li>University: Miva Open University</li>
+                    <li>Location: Nigeria</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Emmanuel Koko. All rights reserved. | Crafted with <span class="heart">❤</span> for Academic Excellence</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
