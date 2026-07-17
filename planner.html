@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic Planner - Manage tasks and assignments efficiently with Emmanuel Koko's portfolio.">
+    <meta name="keywords" content="Academic Planner, Task Manager, To-Do List, Productivity">
+    <title>Academic Planner | Emmanuel Koko Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">🔐</span>
+                    <span class="logo-text">EK</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-page="about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="planner.html" class="nav-link active" data-page="planner">Academic Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header" aria-label="Academic Planner header">
+            <div class="page-header-content">
+                <h1>Academic Planner</h1>
+                <p>Manage your tasks, assignments, and academic goals</p>
+            </div>
+        </section>
+
+        <!-- Planner Section -->
+        <section class="planner-section" aria-label="Task management area">
+            <div class="container">
+                <div class="planner-container">
+                    <!-- Input Section -->
+                    <div class="planner-input-area glass-effect">
+                        <h2>Add New Task</h2>
+                        <form id="taskForm" class="task-form">
+                            <div class="form-group">
+                                <input 
+                                    type="text" 
+                                    id="taskInput" 
+                                    placeholder="Enter task description..." 
+                                    class="task-input"
+                                    required
+                                    aria-label="Task description"
+                                >
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input 
+                                        type="date" 
+                                        id="taskDate" 
+                                        class="task-date"
+                                        aria-label="Task due date"
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <select id="taskPriority" class="task-priority" aria-label="Task priority">
+                                        <option value="low">Low Priority</option>
+                                        <option value="medium" selected>Medium Priority</option>
+                                        <option value="high">High Priority</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Add Task</button>
+                        </form>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="planner-stats">
+                        <div class="stat-box">
+                            <div class="stat-value" id="totalTasks">0</div>
+                            <div class="stat-label">Total Tasks</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="completedTasks">0</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="pendingTasks">0</div>
+                            <div class="stat-label">Pending</div>
+                        </div>
+                    </div>
+
+                    <!-- Filter Section -->
+                    <div class="planner-filters">
+                        <h3>Filter Tasks</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All Tasks</button>
+                            <button class="filter-btn" data-filter="pending">Pending</button>
+                            <button class="filter-btn" data-filter="completed">Completed</button>
+                        </div>
+                        <div class="search-box">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Search tasks..." 
+                                class="search-input"
+                                aria-label="Search tasks"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Tasks List -->
+                    <div class="tasks-container">
+                        <div id="tasksEmpty" class="empty-state">
+                            <p>📝 No tasks yet. Add one to get started!</p>
+                        </div>
+                        <div id="tasksList" class="tasks-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="planner-tips" aria-label="Productivity tips">
+            <div class="container">
+                <h2 class="section-title">Productivity Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card glass-effect">
+                        <div class="tip-icon">⏰</div>
+                        <h3>Set Priorities</h3>
+                        <p>Mark tasks as high, medium, or low priority to focus on what matters most.</p>
+                    </div>
+                    <div class="tip-card glass-effect">
+                        <div class="tip-icon">📅</div>
+                        <h3>Use Due Dates</h3>
+                        <p>Set due dates for your tasks to stay on top of deadlines and manage time effectively.</p>
+                    </div>
+                    <div class="tip-card glass-effect">
+                        <div class="tip-icon">✅</div>
+                        <h3>Track Progress</h3>
+                        <p>Check off completed tasks to visualize your progress and maintain motivation.</p>
+                    </div>
+                    <div class="tip-card glass-effect">
+                        <div class="tip-icon">🔍</div>
+                        <h3>Search & Filter</h3>
+                        <p>Use search and filter options to quickly find specific tasks and organize your workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer section">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Emmanuel Koko</h4>
+                <p>Cybersecurity Student | Information Security Enthusiast</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <ul>
+                    <li>Email: <a href="mailto:e.koko6985@miva.edu.ng">e.koko6985@miva.edu.ng</a></li>
+                    <li>University: Miva Open University</li>
+                    <li>Location: Nigeria</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Emmanuel Koko. All rights reserved. | Crafted with <span class="heart">❤</span> for Academic Excellence</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/planner.js"></script>
+</body>
+</html>

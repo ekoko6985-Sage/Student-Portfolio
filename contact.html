@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with me. Contact form for inquiries and collaborations.">
-    <meta name="keywords" content="contact, email, get in touch">
-    <title>Student Portfolio - Contact</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="description" content="Contact Emmanuel Koko - Get in touch for collaborations, opportunities, or inquiries.">
+    <meta name="keywords" content="Contact, Emmanuel Koko, Email, Get in Touch">
+    <title>Contact | Emmanuel Koko Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="spinner"></div>
-        <p class="typing-text">Loading contact...</p>
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar sticky-navbar">
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">📚</span>
-                <span class="logo-text">Portfolio</span>
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">🔐</span>
+                    <span class="logo-text">EK</span>
+                </a>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Me</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-page="about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="planner.html" class="nav-link" data-page="planner">Academic Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active" data-page="contact">Contact</a>
+                </li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -36,126 +53,146 @@
                 <span></span>
             </div>
         </div>
-        <div class="scroll-progress" id="scrollProgress"></div>
     </nav>
 
-    <main>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <main id="main-content">
         <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
+        <section class="page-header" aria-label="Contact page header">
+            <div class="page-header-content">
                 <h1>Get In Touch</h1>
-                <p>I'd love to hear from you. Let's connect!</p>
+                <p>Let's connect! I'd love to hear from you.</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section">
+        <section class="contact-section" aria-label="Contact form and information">
             <div class="container">
                 <div class="contact-grid">
-                    <!-- Contact Information -->
-                    <div class="contact-info">
-                        <h2>Contact Information</h2>
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-details">
-                                <h3>Email</h3>
-                                <p><a href="mailto:student@email.com">student@email.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-details">
-                                <h3>Phone</h3>
-                                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Location</h3>
-                                <p>City, Country</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">⏰</div>
-                            <div class="contact-details">
-                                <h3>Response Time</h3>
-                                <p>I'll get back to you within 24 hours</p>
-                            </div>
-                        </div>
-
-                        <!-- Social Links -->
-                        <div class="contact-social">
-                            <h3>Connect With Me</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link" aria-label="GitHub">
-                                    <span class="social-icon">🐙</span>
-                                    <span>GitHub</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="LinkedIn">
-                                    <span class="social-icon">💼</span>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Twitter">
-                                    <span class="social-icon">🐦</span>
-                                    <span>Twitter</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Instagram">
-                                    <span class="social-icon">📸</span>
-                                    <span>Instagram</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Contact Form -->
-                    <div class="contact-form-container">
+                    <div class="contact-form-wrapper glass-effect">
                         <h2>Send Me a Message</h2>
-                        <form class="contact-form" id="contactForm" novalidate>
+                        <form id="contactForm" class="contact-form" novalidate>
                             <div class="form-group">
                                 <label for="fullName">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required aria-label="Full name" aria-required="true">
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="Your full name"
+                                    required
+                                    aria-label="Full Name"
+                                    aria-required="true"
+                                >
                                 <span class="error-message" id="nameError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required aria-label="Email address" aria-required="true">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="your.email@example.com"
+                                    required
+                                    aria-label="Email Address"
+                                    aria-required="true"
+                                >
                                 <span class="error-message" id="emailError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" aria-label="Phone number">
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+234 800 000 0000"
+                                    aria-label="Phone Number"
+                                >
                                 <span class="error-message" id="phoneError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="subject">Subject *</label>
-                                <input type="text" id="subject" name="subject" placeholder="What is this about?" required aria-label="Subject" aria-required="true">
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    placeholder="What is this about?"
+                                    required
+                                    aria-label="Subject"
+                                    aria-required="true"
+                                >
                                 <span class="error-message" id="subjectError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Your message here..." required aria-label="Message" aria-required="true"></textarea>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Your message (minimum 10 characters)..."
+                                    rows="6"
+                                    required
+                                    aria-label="Message"
+                                    aria-required="true"
+                                ></textarea>
                                 <span class="error-message" id="messageError"></span>
                             </div>
 
-                            <div class="form-checkbox">
-                                <input type="checkbox" id="agreeTerms" name="agreeTerms" aria-label="Agree to terms">
-                                <label for="agreeTerms">I agree to the privacy policy and terms of service</label>
+                            <div class="form-group checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    id="subscribe" 
+                                    name="subscribe"
+                                    aria-label="Subscribe to updates"
+                                >
+                                <label for="subscribe">Subscribe me to occasional updates and newsletters</label>
                             </div>
 
-                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                            <button type="reset" class="btn btn-outline full-width">Clear Form</button>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                            <p class="form-note">* Required fields</p>
                         </form>
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <p>✓ Thank you! Your message has been received. I'll get back to you soon.</p>
+                        </div>
+                    </div>
 
-                        <!-- Success Message -->
-                        <div class="success-message" id="successMessage" style="display: none;">
-                            <div class="message-icon">✓</div>
-                            <h3>Message Sent Successfully!</h3>
-                            <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-card glass-effect">
+                            <div class="info-icon">📧</div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:e.koko6985@miva.edu.ng">e.koko6985@miva.edu.ng</a></p>
+                            <p class="info-description">Feel free to send me an email directly. I typically respond within 24 hours.</p>
+                        </div>
+
+                        <div class="info-card glass-effect">
+                            <div class="info-icon">🎓</div>
+                            <h3>University</h3>
+                            <p>Miva Open University</p>
+                            <p class="info-description">Currently pursuing B.Sc. in Cybersecurity</p>
+                        </div>
+
+                        <div class="info-card glass-effect">
+                            <div class="info-icon">📍</div>
+                            <h3>Location</h3>
+                            <p>Nigeria</p>
+                            <p class="info-description">Available for online collaborations and remote opportunities worldwide.</p>
+                        </div>
+
+                        <div class="info-card glass-effect">
+                            <div class="info-icon">💼</div>
+                            <h3>Connect</h3>
+                            <p>Follow me on social media for updates and insights on cybersecurity</p>
+                            <div class="social-links-contact">
+                                <a href="#" aria-label="GitHub">GitHub</a>
+                                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                                <a href="#" aria-label="Twitter">Twitter</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,44 +200,67 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="contact-faq-section">
+        <section class="faq-section" aria-label="Frequently asked questions">
             <div class="container">
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-container">
+                <div class="faq-grid">
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How quickly will you respond to my message?</span>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can I reach you?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>I typically respond to messages within 24 hours. For urgent matters, feel free to call me directly at the phone number provided.</p>
+                            <p>You can reach me via email at e.koko6985@miva.edu.ng or through the contact form on this page. I'm also available on social media for quick inquiries.</p>
                         </div>
                     </div>
+
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Are you available for freelance projects?</span>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What should I include in my message?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes, I'm open to freelance opportunities. Please provide details about your project requirements, timeline, and budget in your message.</p>
+                            <p>Please include your name, email, subject, and a detailed message explaining your inquiry. This helps me understand your needs and respond appropriately.</p>
                         </div>
                     </div>
+
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What's your typical project turnaround time?</span>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How long will it take to get a response?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Project timelines vary based on complexity and scope. I'll provide a detailed estimate after understanding your specific requirements. Typically, projects range from 1-4 weeks.</p>
+                            <p>I aim to respond to all inquiries within 24-48 hours. During academic periods, it might take slightly longer, but I will respond to all messages.</p>
                         </div>
                     </div>
+
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you offer consultation services?</span>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Are you open to collaborations?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes, I offer consultation services for web development, project planning, and technical guidance. Contact me to discuss your specific needs.</p>
+                            <p>Yes! I'm always interested in collaborations on cybersecurity projects, web development work, or educational initiatives. Feel free to reach out with your ideas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I connect with you on social media?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! You can find me on GitHub, LinkedIn, and Twitter. I share updates about my projects, cybersecurity tips, and industry insights regularly.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Do you offer freelance services?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>I'm currently focused on my studies, but I'm open to discussing specific opportunities for web development or cybersecurity projects. Contact me to explore possibilities.</p>
                         </div>
                     </div>
                 </div>
@@ -208,46 +268,42 @@
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="planner.html">Planner</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>📧 <a href="mailto:student@email.com">student@email.com</a></li>
-                        <li>📱 +1 (555) 123-4567</li>
-                        <li>📍 City, Country</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Me</h4>
-                    <div class="footer-social">
-                        <a href="#" aria-label="GitHub">🐙</a>
-                        <a href="#" aria-label="LinkedIn">💼</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                    </div>
-                </div>
+    <footer class="footer" aria-label="Footer section">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Emmanuel Koko</h4>
+                <p>Cybersecurity Student | Information Security Enthusiast</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 My Student Portfolio. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <ul>
+                    <li>Email: <a href="mailto:e.koko6985@miva.edu.ng">e.koko6985@miva.edu.ng</a></li>
+                    <li>University: Miva Open University</li>
+                    <li>Location: Nigeria</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Emmanuel Koko. All rights reserved. | Crafted with <span class="heart">❤</span> for Academic Excellence</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-
-    <script src="js/validation.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>
